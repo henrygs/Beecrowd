@@ -1,3 +1,4 @@
+import java.text.DecimalFormat
 import java.util.*
 import kotlin.math.pow
 
@@ -7,12 +8,11 @@ fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
 
     val raio = scan.nextLine().trim().toDouble()
-    // usando a expressão/função pow
-    val exp = raio.pow(2)
+    val df = DecimalFormat("00000.0000")
     val pi = 3.14159
-    val area = pi * exp
+    val area = pi * (raio * raio)
 
-    println("A=%.4f".format(area))
+    println("A=${df.format(area)}")
 }
 
 
