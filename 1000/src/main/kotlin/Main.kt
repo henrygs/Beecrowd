@@ -1,14 +1,14 @@
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.util.*
 
-fun main() {
-
+fun main(args: Array<String>) {
+    
     val scan = Scanner(System.`in`)
 
-    val a = scan.nextLine().trim().toInt()
-    val b = scan.nextLine().trim().toInt()
+    val a = scan.nextLine().trim().toDouble()
+    val pi = 3.14159
+    val area = pi * (a*a)
 
-    val total = a + b
-
-    println("X = $total")
-
+    println("A=%.4f".format(area))
 }
